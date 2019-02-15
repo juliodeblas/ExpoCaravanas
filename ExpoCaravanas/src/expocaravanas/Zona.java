@@ -29,12 +29,22 @@ public class Zona {
     }
 
     public void Venta(int entradaspedidas) {
-        
-        if (entradas-entradaspedidas >= 0) {
-            entradas = entradas - entradaspedidas;
-            System.out.println("Vendida correctamente, ahora quedan " + entradas + " entradas.");
-        } else{
-            System.out.println("Ya no quedan entradas.");
+
+        if(entradaspedidas<=entradas){
+            if (entradaspedidas > 0) {
+                if (entradas - entradaspedidas >= 0) {
+                    entradas = entradas - entradaspedidas;
+                    System.out.println("Vendida correctamente, ahora quedan " + entradas + " entradas.");
+                } else {
+                    System.out.println("Ya no quedan entradas.");
+                }
+            }
+            else{
+                System.out.println("Introduzca un número de entradas mayor que 0.");
+            }
+        }
+        else{
+            System.out.println("No puedes comprar más entradas de las que hay disponibles.");
         }
     }
 
