@@ -18,6 +18,7 @@ public class ExpoCaravanas {
      */
     public static void main(String[] args) {
         int opcion1, opcion2;
+        int entradaspedidas = 0;
         Scanner sc = new Scanner(System.in);
 
         Zona zonap = new Zona();
@@ -28,11 +29,12 @@ public class ExpoCaravanas {
         zonavip.setEntradas(25);
 
         System.out.println("1-------------->Mostrar entradas libres");
-        System.out.println("2-------------->Vender entradas");
+        System.out.println("2-------------->Comprar entradas");
         System.out.println("3-------------->Salir");
         opcion1 = 1;
 
         while (opcion1 != 3) {
+
             System.out.println("¿Qué opción quieres realizar?");
             opcion1 = sc.nextInt();
             if (opcion1 == 1) {
@@ -46,14 +48,17 @@ public class ExpoCaravanas {
                 System.out.println("3-------------->ZONA VIP");
                 opcion2 = sc.nextInt();
                 if (opcion2 == 1) {
-                    zonap.Venta();
-                    System.out.println("Vendida correctamente, ahora quedan " + zonap.getEntradas() + " en la zona principal.");
+                    System.out.println("¿Cuántas entradas quieres comprar?");
+                    entradaspedidas = sc.nextInt();
+                    zonap.Venta(entradaspedidas);
                 } else if (opcion2 == 2) {
-                    zonacv.Venta();
-                    System.out.println("Vendida correctamente, ahora quedan " + zonacv.getEntradas() + " en la zona de compra-venta.");
+                    System.out.println("¿Cuántas entradas quieres comprar?");
+                    entradaspedidas = sc.nextInt();
+                    zonacv.Venta(entradaspedidas);
                 } else if (opcion2 == 3) {
-                    zonavip.Venta();
-                    System.out.println("Vendida correctamente, ahora quedan " + zonavip.getEntradas() + " en la zona VIP.");
+                    System.out.println("¿Cuántas entradas quieres comprar?");
+                    entradaspedidas = sc.nextInt();
+                    zonavip.Venta(entradaspedidas);
                 } else {
                     System.out.println("ERROR");
                 }

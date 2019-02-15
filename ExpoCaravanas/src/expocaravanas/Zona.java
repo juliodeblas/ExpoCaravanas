@@ -28,9 +28,13 @@ public class Zona {
         this.entradas = entradas;
     }
 
-    public void Venta() {
-        if (entradas > 0) {
-            entradas = entradas - 1;
+    public void Venta(int entradaspedidas) {
+        
+        if (entradas-entradaspedidas >= 0) {
+            entradas = entradas - entradaspedidas;
+            System.out.println("Vendida correctamente, ahora quedan " + entradas + " entradas.");
+        } else{
+            System.out.println("Ya no quedan entradas.");
         }
     }
 
