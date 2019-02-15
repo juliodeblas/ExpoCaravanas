@@ -47,13 +47,13 @@ public class ExpoCaravanas {
                 opcion2 = sc.nextInt();
                 if (opcion2 == 1) {
                     zonap.Venta();
-                    System.out.println("Vendida correctamente, ahora quedan: " + zonap.getEntradas());
+                    System.out.println("Vendida correctamente, ahora quedan " + zonap.getEntradas() + " en la zona principal.");
                 } else if (opcion2 == 2) {
                     zonacv.Venta();
-                    System.out.println("Vendida correctamente, ahora quedan: " + zonacv.getEntradas());
+                    System.out.println("Vendida correctamente, ahora quedan " + zonacv.getEntradas() + " en la zona de compra-venta.");
                 } else if (opcion2 == 3) {
                     zonavip.Venta();
-                    System.out.println("Vendida correctamente, ahora quedan: " + zonavip.getEntradas());
+                    System.out.println("Vendida correctamente, ahora quedan " + zonavip.getEntradas() + " en la zona VIP.");
                 } else {
                     System.out.println("ERROR");
                 }
