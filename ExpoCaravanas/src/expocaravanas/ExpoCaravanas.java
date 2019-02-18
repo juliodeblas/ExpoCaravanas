@@ -77,6 +77,7 @@ public class ExpoCaravanas {
             }
         } catch (InputMismatchException e) {
             System.out.println("Debes introducir un numero.");
+            ExpoCaravanas.main (null); 
         }
     }
 
